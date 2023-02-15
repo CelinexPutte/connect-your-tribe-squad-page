@@ -1,8 +1,17 @@
 <%- include('./partials/head') %>
 
 <main>
-  <p>hoi</p>
+	<h1><%= squad.name %></h1>
+	<% squad.members.forEach(member => { %>
+	<section>
+		<% if (member.avatar) { %>
+		<img src="<%- member.avatar %>" alt="Avatar van <%= member.name %>" />
+		<% } else { %>
+		<img src="images/placeholder.jpg" alt="Placeholder avatar" />
+		<% } %>
+		<h2><%= member.name%> <%= member.prefix %> <%= member.surname%></h2>
+	</section>
+	<% }) %>
 </main>
-  
+
 <%- include('./partials/foot') %>
-  
