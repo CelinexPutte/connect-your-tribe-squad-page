@@ -1,19 +1,18 @@
 // Importeer express uit de node_modules map
 import express from "express";
 
-// Gegevens ophalen
-const url =
-	"https://whois.fdnd.nl/api/v1/squad/squad-a-2022?orderBy=name&direction=ASC";
-const data = await fetch(url).then((response) => response.json());
-
-console.log(data);
-
 // Maak een nieuwe express app aan
 const app = express();
 
 // Stel ejs in als template engine en geef de 'views' map door
 app.set("view engine", "ejs");
 app.set("views", "./views");
+app.use(express.static('public'))
+
+// Gegevens ophalen
+const url =
+	"https://whois.fdnd.nl/api/v1/squad/squad-a-2022";
+const data = await fetch(url).then((response) => response.json());
 
 // Gebruik de map 'public' voor statische resources
 app.use(express.static("public"));
@@ -22,6 +21,14 @@ app.use(express.static("public"));
 app.get("/", function (req, res) {
 	// res.send('Hello World!')
 	res.render("index", data);
+
+	let slug = request.query.squad || 'squad-a-2022'
+  	let orderBy = request.query.orderBy || 'name'
+  	let squadUrl = url + slug + '?orderBy=' + orderBy + '&direction=ASC'
+
+	fetchJson(squadUrl).then((data) => {
+    response.render('index', data)
+  })
 });
 
 // Stel het poortnummer in waar express op gaat luisteren
