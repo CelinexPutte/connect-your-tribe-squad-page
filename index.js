@@ -10,8 +10,7 @@ app.set("views", "./views");
 app.use(express.static('public'))
 
 // Gegevens ophalen
-const url =
-	"https://whois.fdnd.nl/api/v1/squad/squad-a-2022";
+const url = "https://whois.fdnd.nl/api/v1/squad/squad-a-2022";
 const data = await fetch(url).then((response) => response.json());
 
 // Gebruik de map 'public' voor statische resources
