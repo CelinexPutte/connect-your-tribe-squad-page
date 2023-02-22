@@ -14,6 +14,7 @@
 
 html {
 	scroll-behavior: smooth;
+	width: 100%;
 }
 
 body {
@@ -47,6 +48,10 @@ h2 {
 
 .options-title:hover {
 	cursor: pointer;
+}
+
+.options-title-large {
+	display: none;
 }
 
 .fa-caret-down {
@@ -140,18 +145,40 @@ img {
 	}
 
 	.options {
-		width: fit-content;
 		height: fit-content;
+	}
+}
+
+@media (min-width: 1040px) {
+	.cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.options {
+		width: fit-content;
+		max-width: unset;
+		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		background-color: inherit;
+		color: var(--color-purple);
 	}
 
 	.options-title {
 		display: none;
 	}
 
+	.options-title-large {
+		display: inline-flex;
+		color: var(--color-purple);
+	}
+
 	.sort-filter {
 		display: flex;
 		flex-flow: row nowrap;
 		width: fit-content;
+		gap: 2rem;
 	}
 
 	.sort-filter > a:first-of-type {
@@ -159,14 +186,7 @@ img {
 	}
 
 	.sort-filter a {
-		width: 10rem;	
-	}
-}
-
-
-@media (min-width: 1040px) {
-	.cards {
-		grid-template-columns: 1fr 1fr 1fr;
+		color: var(--color-purple);
 	}
 }
 

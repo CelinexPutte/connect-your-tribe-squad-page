@@ -18,7 +18,6 @@ app.use(express.static("public"));
 
 // Maak een route voor de index
 app.get("/", function (request, response) {
-	// let slug = request.query.squad || "squad-a-2022"
   	let orderBy = request.query.orderBy || "name"
 	let direction = request.query.direction || "ASC"
   	let squadUrl = url + "?orderBy=" + orderBy + "&direction=" + direction
@@ -26,12 +25,7 @@ app.get("/", function (request, response) {
 	fetch(squadUrl)
 		.then((response) => response.json())
 		.then((data) => response.render('index', data));
-	}
-
-// 	fetchJson(squadUrl).then((data) => {
-//     response.render('index', data)
-//   })
-);
+	});
 
 // Stel het poortnummer in waar express op gaat luisteren
 app.set("port", process.env.PORT || 8000);
