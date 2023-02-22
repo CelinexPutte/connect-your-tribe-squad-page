@@ -17,18 +17,21 @@ const data = await fetch(url).then((response) => response.json());
 app.use(express.static("public"));
 
 // Maak een route voor de index
-app.get("/", function (req, res) {
-	// res.send('Hello World!')
-	res.render("index", data);
+app.get("/", function (request, response) {
+	// let slug = request.query.squad || "squad-a-2022"
+  	let orderBy = request.query.orderBy || "name"
+	let direction = request.query.direction || "ASC"
+  	let squadUrl = url + "?orderBy=" + orderBy + "&direction=" + direction
 
-	let slug = request.query.squad || 'squad-a-2022'
-  	let orderBy = request.query.orderBy || 'name'
-  	let squadUrl = url + slug + '?orderBy=' + orderBy + '&direction=ASC'
+	fetch(squadUrl)
+		.then((response) => response.json())
+		.then((data) => response.render('index', data));
+	}
 
-	fetchJson(squadUrl).then((data) => {
-    response.render('index', data)
-  })
-});
+// 	fetchJson(squadUrl).then((data) => {
+//     response.render('index', data)
+//   })
+);
 
 // Stel het poortnummer in waar express op gaat luisteren
 app.set("port", process.env.PORT || 8000);

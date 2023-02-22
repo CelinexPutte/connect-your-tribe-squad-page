@@ -10,3 +10,18 @@
     <script src="https://kit.fontawesome.com/20861d0bcc.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <header>
+		<h1><%= squad.name %></h1>
+		<section class="options">
+			<div class="options-title">
+				<h2>Sorteren</h2>
+				<i class="fa-solid fa-caret-down"></i>
+			</div>
+			<div class="sort-filter">
+				<a href="/?orderBy=name">Voornaam A-Z</a>
+				<a href="/?orderBy=name&direction=DESC">Voornaam Z-A</a>
+				<a href="/?orderBy=surname">Achternaam A-Z</a>
+				<a href="/?orderBy=surname&direction=DESC">Achternaam Z-A</a>
+			</div>
+		</section>
+	</header>

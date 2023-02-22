@@ -21,15 +21,16 @@ body {
 	padding: 2rem;
 }
 
-main {
+header, main {
 	margin-left: auto;
 	margin-right: auto;
-	width: fit-content;
+	width: 20rem;
 }
 
 h1 {
 	color: var(--color-purple);
 	margin-bottom: 2rem;
+	font-size: 2.5rem;
 }
 
 h2 {
@@ -42,6 +43,10 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
+}
+
+.options-title:hover {
+	cursor: pointer;
 }
 
 .fa-caret-down {
@@ -110,10 +115,20 @@ img {
 
 
 @media (min-width: 720px) {
-	main {
+	header, main {
 		margin-left: 0;
 		margin-right: 0;
 		width: 100%;
+	}
+
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	h1 {
+		font-size: 3rem;
 	}
 
 	.cards {
@@ -126,8 +141,28 @@ img {
 
 	.options {
 		width: fit-content;
+		height: fit-content;
+	}
+
+	.options-title {
+		display: none;
+	}
+
+	.sort-filter {
+		display: flex;
+		flex-flow: row nowrap;
+		width: fit-content;
+	}
+
+	.sort-filter > a:first-of-type {
+		margin-top: 0;
+	}
+
+	.sort-filter a {
+		width: 10rem;	
 	}
 }
+
 
 @media (min-width: 1040px) {
 	.cards {
