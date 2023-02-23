@@ -1,3 +1,5 @@
+// Uitklappen sorteer menu
+
 let sort = document.querySelector(".options-title")
 let menu = document.querySelector(".sort-filter")
 

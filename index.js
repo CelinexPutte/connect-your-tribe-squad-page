@@ -1,13 +1,12 @@
 // Importeer express uit de node_modules map
 import express from "express";
 
-// Maak een nieuwe express app aan
+// Maak een nieuwe variabele aan
 const app = express();
 
 // Stel ejs in als template engine en geef de 'views' map door
 app.set("view engine", "ejs");
 app.set("views", "./views");
-app.use(express.static('public'))
 
 // Gegevens ophalen
 const url = "https://whois.fdnd.nl/api/v1/squad/squad-a-2022";
@@ -16,7 +15,7 @@ const data = await fetch(url).then((response) => response.json());
 // Gebruik de map 'public' voor statische resources
 app.use(express.static("public"));
 
-// Maak een route voor de index
+// Maak standaard waarden voor de data en een route voor de index
 app.get("/", function (request, response) {
   	let orderBy = request.query.orderBy || "name"
 	let direction = request.query.direction || "ASC"
