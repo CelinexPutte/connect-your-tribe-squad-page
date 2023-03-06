@@ -14,16 +14,28 @@ Op deze pagina is meteen te zien welke mensen er in sqaud A zitten. Dit zijn de 
 
 Desktop:
 
-<img src="https://user-images.githubusercontent.com/112859814/219973995-e7fee4fe-98cd-4cff-837d-9b48085c858e.png" alt="Desktop" width=100%>
+<img src="https://user-images.githubusercontent.com/112859814/223154321-1ae9876d-e2f9-4672-9368-c79b86a06897.png" alt="Desktop" width=100%>
 
 Mobiel:
 
-<img src="https://user-images.githubusercontent.com/112859814/219973998-663a2a67-440d-400b-abc8-39ecdb04043f.png" alt="Mobiel deel 1" width=25%> <img src="https://user-images.githubusercontent.com/112859814/219974002-dc93aa6d-f943-4e18-999a-064224cdebd0.png" alt="Mobiel deel 2" width=25%>
+<img src="https://user-images.githubusercontent.com/112859814/223153330-b2133036-19f1-41a3-8c46-e0bb1ab7307f.png" alt="Mobiel met ingeklapt menu" width=25%> <img src="https://user-images.githubusercontent.com/112859814/223153336-c48a5132-45df-45d2-b04e-07124eb4232a.png" alt="Mobiel met uitgeklapt menu" width=25%>
 
 De pagina vind je [hier](https://clothes-nightingale.cyclic.app/).
 
 ## 📌 Kenmerken
-Voor dit project heb ik met node.js, express en ejs gewerkt. Daarnaast heb ik ook gewoon gebruik gemaakt van een css document.
+Voor dit project heb ik met node.js, express en ejs gewerkt. Daarnaast heb ik ook gewoon gebruik gemaakt van een css en js document.
+
+**Node**
+
+Node.js is een snelle open-scource omgeving waarmee JavaScript buiten een browser uitgevoerd kan worden om zo server side te werken. In plaats van een nieuwe taal te leren, kun je in Node gewoon JavaScript gebruiken.
+
+**Express**
+
+Express is een framework die veel functies biedt voor het bouwen van mobiele- en webapplicaties. Het wordt gebruikt om een enkele pagina, meerdere pagina's en hybride webapplicaties te bouwen. Ook Express maakt gebruik van JavaScript.
+
+**EJS**
+
+EJS is een gemakkelijke template taal waarin je gewoon HTML-elementen kunt gebruiken door middel van JavaScript. Verder is het een handige tool voor het genereren van pagina's met dynamische data en waarbij je onderdelen op meerdere pagina's kunt gebruiken (zoals een navigatie of een footer).
 
 ## 💻 Gebruik
 Op de mobiele versie heb ik ervoor gezorgd dat alles goed leesbaar is door de kaarten onder elkaar te plaatsen. Verder zitten hier geen animaties bij. Ook is het sorteer menu ingeklapt om het overzichtelijk te houden. Deze is uit te klappen door er op te klikken.
